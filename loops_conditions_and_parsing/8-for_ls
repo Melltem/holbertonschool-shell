@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-#This is a comment
+
 for file in *; do
-  if [[ "$file" == *-* ]]; then
-     echo "${file#*-}"
-  fi
+  echo "${file#*-}"
 done
