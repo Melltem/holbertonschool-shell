@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
-#This is a comment
-y=1
-while [ $y -le 12 ]
+# This script displays the time from 0:1 to 12:59 using while loops
+
+hour=0
+while [ $hour -le 12 ]
 do
-  i=1
-  while [ $i -le 60 ]
+  minute=1
+  while [ $minute -le 59 ]
   do
-    if [ $i -eq 60 ]
-    then
-       echo "Hour: 1"
-    else
-       echo $i
-    fi
-   i=$((i+1))
+    echo "$hour:$minute"
+    minute=$((minute + 1))
   done
- y=$((y+1))
+  hour=$((hour + 1))
 done
