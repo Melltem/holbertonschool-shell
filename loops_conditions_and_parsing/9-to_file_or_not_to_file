@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-#This is a comment
+
 if [ -e "school" ]; then
-  if [ ! -s "school" ]; then
-    echo "school file is empty"
-  else
+  echo "school file exists"
+
+  if [ -s "school" ]; then
     echo "school file is not empty"
+  else
+    echo "school file is empty"
   fi
 
   if [ -f "school" ]; then
@@ -13,4 +15,3 @@ if [ -e "school" ]; then
 else
   echo "school file does not exist"
 fi
-
