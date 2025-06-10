@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-#This is a comment
+# This is a comment
 echo $$ > /var/run/myscript.pid
-trap 'echo "I hate the kill command "' SIGTERM
-trap 'echo "Y U no love me?!"' SIGINT
+trap 'echo "I hate the kill command"; rm -f /var/run/myscript.pid; exit' SIGTERM
+trap 'echo "Y U no love me?!"; rm -f /var/run/myscript.pid; exit' SIGINT
+trap 'rm -f /var/run/myscript.pid' EXIT
 while true
 do
-  echo "To infinity and beyond"
+    echo "To infinity and beyond"
+    sleep 2
 done
-rm /var/run/myscript.pid
-trap 'pkill -15 -f /var/run/myscript.pid' SIGQUIT  SIGTERM
