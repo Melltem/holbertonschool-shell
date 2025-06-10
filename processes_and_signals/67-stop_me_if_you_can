@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This is a comment
+pkill -15 -f 7-highlander > /dev/null
+exit 2
