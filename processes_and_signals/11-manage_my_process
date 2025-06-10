@@ -1,5 +1,5 @@
-#!/bin/sh
-
+#!/usr/bin/env bash
+#Comment
 PROCESS_NAME="manage_my_process"
 PID_FILE="/var/run/my_process.pid"
 
