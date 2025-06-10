@@ -12,7 +12,6 @@ start() {
 
 stop() {
     if [ -f ${PID_FILE} ]; then
-        echo "Stopping ${PROCESS_NAME}..."
         kill "$(cat ${PID_FILE})"  # Stop process
         rm -f ${PID_FILE}          # Remove PID file
         echo "${PROCESS_NAME} stopped"
