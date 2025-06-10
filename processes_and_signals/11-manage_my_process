@@ -19,12 +19,11 @@ stop() {
     fi
 }
 
-
 restart() {
-    stop
+    stop > /dev/null 2>&1  # Stop process without displaying output
     sleep 1
-    start
-    echo "${PROCESS_NAME} restarted"
+    start > /dev/null 2>&1  # Start process without displaying output
+    echo "manage_my_process restarted"  # Only display restart message
 }
 
 case "$1" in
