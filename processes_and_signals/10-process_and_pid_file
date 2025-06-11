@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/env/bin bash
 # This is a comment
 echo $$ > /var/run/myscript.pid
 trap 'echo "I hate the kill command" && rm -f /var/run/myscript.pid; exit' SIGTERM
